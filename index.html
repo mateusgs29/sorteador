@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorteador</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="sorteador">
+      <div class="header-area">
+        <h1 class="title">Sorteador de nomes</h1>
+        <textarea
+          name="names"
+          id="textarea-names"
+          class="textarea"
+          cols="20"
+          rows="8"
+          placeholder="Preencha aqui a lista de nomes que deseja sortear, separando com vírgula"
+        ></textarea>
+      </div>
+
+      <div class="inputs-area">
+        <span class="input-number-area__text">Sortear</span>
+        <input
+          type="number"
+          class="input-number"
+          id="input-quantity"
+          value="1"
+          min="1"
+        />
+        <span class="input-number-area__text">nomes da lista acima</span>
+
+        <div class="checkboxes-area">
+          <div class="checkbox-abc-area">
+            <input type="checkbox" name="alphabetic" id="checkbox-alphabetic" />
+            <label for="alphabetic">Resultado em ordem alfabética</label>
+          </div>
+
+          <div class="checkbox-selectall-area">
+            <input type="checkbox" name="select-all" id="checkbox-select-all" />
+            <label for="select-all">Sortear todos os nomes</label>
+          </div>
+
+          <div class="checkbox-daily-area">
+            <input type="checkbox" name="daily" id="checkbox-daily" />
+            <label for="daily">Sortear para o check-in diário</label>
+          </div>
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        class="button-general button-sortear"
+        onclick="sort()"
+      >
+        Sortear agora
+      </button>
+
+      <div class="result-area d-none"></div>
+    </main>
+    <footer class="footer">
+      <p>Desenvolvido por 
+        <a href="https://www.linkedin.com/in/mateus-gs/" target="_blank">Mateus Gomes</a> e 
+        <a href="https://www.linkedin.com/in/raphael-haus-zaneti-9b0a2075/" target="_blank">Raphael Zaneti</a>
+      </p>
+    </footer>
+
+    <script src="./sorteador.js"></script>
+  </body>
+</html>
